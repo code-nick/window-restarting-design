@@ -1,0 +1,92 @@
+body{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #0080ff;
+    min-height: 100vh;
+}
+.container{
+    position:relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    height: 50px;
+    width: 50px;
+    background-color: #0000;
+    position: absolute;
+    animation: speed 3.5s linear infinite;
+}
+
+.box:nth-child(1){
+    animation-delay: 0.3s;
+}
+
+.box:nth-child(1){
+    animation-delay: 0.15s;
+}
+.box:nth-child(2){
+    animation-delay: 0.3s;
+}
+.box:nth-child(3){
+    animation-delay: 0.45s;
+}
+.box:nth-child(4){
+    animation-delay: 0.6s;
+}
+.box:nth-child(5){
+    animation-delay: 0.75s;
+}
+.box:nth-child(6){
+    animation-delay: 0.9s;
+}
+.box:nth-child(7){
+    animation-delay: 0.3s;
+}
+
+@keyframes speed{
+    30%{
+        transform: rotate(220deg);
+    }
+    40%{
+        transform: rotate(450deg);
+    }
+    75%{
+        transform: rotate(720deg);
+        opacity: 1;
+    }
+    76%{
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+}
+.box .dot{
+    top: 30px;
+    height: 7px;
+    width: 7px;
+    background-color: #ffff;
+    position: relative;
+    border-radius: 50%;
+}
+.container .wrapper{
+    position: absolute;
+    top: -30px;
+    left: 670px;
+    transform: scale(1.5);
+}
+.container .text{
+    position:absolute;
+    color: #fff;
+    left: 50%;
+    bottom: -85px;
+    font-size: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    transform: translateX(-20px);
+}
